@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="utf-8"/>
+        <link rel = "icon" href = "Images/Logo/favicon-32x32.png"?>
+        <meta name="viewport" content = "width=device-width, initial-scale = 1.0" ?>
+        <meta
+            name = "description"
+            content =  "The online Attendence System System uses NFC reader rags to mark the attendence of a student and also shows their corresponding attendence details" />
+            <title>Online Attendence System</title>
+
+    <!--CSS files-->
+    <link rel = "stylesheet" href ="/CSS files/index.css" />
+    <link rel = "stylesheet" href ="/CSS files/Home-Page/navbar.css" />
+    <link rel = "stylesheet" href ="/CSS files/Home-Page/login.css" />
+    <link rel = "stylesheet" href ="/CSS files/Home-Page/about.css" />
+    <link rel = "stylesheet" href ="/CSS files/Home-Page/contact.css" />
+    <link rel = "stylesheet" href ="/CSS files/Home-Page/footer.css" />
+
+    <!--Bootstrap cdns-->
+    <link 
+        href = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel = "stylesheet" />
+        <script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!--Font Awesome-->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+        <!--JQuery cdn-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    </head>
+
+        <body>
+            <!--Navbar-->
+            <nav class = "container-fluid">
+               <!--Logo-->
+               <label class = "logo">
+                <img
+                    class = "logo-img"
+                    src = "/Images/Logo/favicon-32x32.png"
+                    alt = ""/>ATTENDENCE SYSTEM 
+               </label>
+               <!--icon-->
+               <label id = "hamburger">
+                <i class="fas fa-bars"></i>
+               </label>
+               <!--Menu List-->
+               <ul id = "nav-menu" class="nav-menu">
+                <li class="menu"><a id="nav-Home" class="menu-item" href="#">Home</a></li>
+                <li class="menu"><a id="nav-About-us" class="menu-item" href="#about-us">About Us</a></li>
+                <li class="menu"><a id="nav-Contact-us" class="menu-item" href="#contact-us">Contact Us</a></li>
+               </ul>
+            </nav>
+
+            <!--Login Section-->
+            <div class = "container login-section">
+
+                <!--Login area-->
+                <div id = "sign-in" class="login-cluster">
+
+                    <!--Teacher-->
+                    <div id = "teacher-login" class="login-box" onclick="teacherSignIn()">
+                    <img 
+                        class = "login-vector"
+                        src = "/Images/Login Vectors/Teacher.png"
+                        alt = ""
+                        />
+                        <p class="login-text">PROFESSOR</p>
+                    </div>
+                    <!--Student-->
+                    <div id="student-login" class="login-box" onclick="studentSignIn()">
+                    <img
+                        class = "login-vector"
+                        src = "/Images/Login Vectors/Student.png"
+                        alt = ""/>
+                        <p class="login-text">STUDENT</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!--About Us Section-->
+            <div id = "about-us-section" class="container">
+
+                <!--Heading-->
+                <p id="about-us" class="section-heading">ABOUT US</p>
+
+                <!--About Section-->
+                <div class="about-section">
+                    <!--About Image-->  
+                    <img id="about-vector" src="/Images/About Vector/About.png" alt="" />
+
+                    <!--About Content-->
+                    <div class="about content">
+                        <div class="about-heading" style="font-family:Times New Roman;">Auto Attendence System</div>
+                        <div class="about-body" style="font-family:Times New Roman;">
+                            The Auto Attendance System (AAS) is a web-based platform that streamlines the attendance management process for colleges and universities. With its user-friendly interface and robust features, AAS empowers institutions to effectively track student attendance, enhance classroom engagement, and maintain accurate records.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Contact Us Section-->
+        <div id = "contact-us" class="container">
+
+            <!--Heading-->
+            <p id = "contact-us" class="section-heading">CONTACT US</p>
+            <div class = "contact-section">
+            <!--Contact Info Section-->
+            <div class = "contact-info">
+                <p class="contact-info-heading">Contact Information</p>
+                <p class="contact-info-sub-heading">
+                    Fill up the form and our team will get back to you in 24 hours.
+                </p>
+                <div class = "contact-info-type" width="18px" height = "18px">
+                    <img
+                        src="/Images/Contact Icons/Telephone.png"
+                        alt=""
+                        class="contact-info-icon"
+                    />
+                    <p class = "contact-info-value">+91 6305975657</p>
+                </div>
+                <div class = "contact-info-type">
+                    <img
+                        src="/Images/Contact Icons/Email.png"
+                        width="20px"
+                        height="16px"
+                        alt=""
+                        class="contact-info-icon"
+                    />
+                    <p class="contact-info-value">Hyderabad,Telangana</p>
+                </div>
+            </div>
+
+            <!--Contact  Form-->
+            <div id = "contact-form" class="contact-form">
+                <div class = "form-box">
+                    <div class="input-box w50">
+                        <input id="contact-fname" id= "contact-fname" class="input" type="text" required>
+                        <span class="input-name">First Name</span>
+                    </div>
+                    <div class="input-box w50">
+                        <input id="contact-lname" id = "contact-lname" class="input" type="text" required>
+                        <span class="input-name">Last Name</span>
+                    </div>
+                    <div class="input-box w50">
+                        <input id="contact-email" id = "contact-email" class="input" type="text" required>
+                        <span class="input-name">Email Id</span>
+                    </div>
+                    <div class="input-box w50">
+                        <input id="contact-phone" id = "contact-phone" class="input" type="text" required>
+                        <span class="input-name">Phone no.</span>
+                    </div>
+                    <div class="input-box w100">
+                        <input id="contact-msg"  id = "contact-msg" class="input" type="text" required>
+                        <span class="input-name">Write your message here...</span>
+                    </div>
+                    <div class = "input-box w100">
+                        <input class="input input-btn" type="reset" value = "Submit" onclick = "submit()">
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+    <div class = "container-fluid footer">
+
+            <!-- JS file -->
+            <script src = "/JS Files/index.js"></script>
+    </div>
+        </body>
+</html>
