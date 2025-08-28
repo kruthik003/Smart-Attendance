@@ -1,0 +1,7 @@
+1. Page title and description
+2. CSS files links
+3. Background color of the whole page
+4. The vector
+5. Background color of the reset and submit button
+6. Shadow of the input box
+7. Js files links
